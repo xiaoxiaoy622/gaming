@@ -71,21 +71,6 @@ gaming_speed/
 scale = clamp(viewport_width / 1366, MIN_SCALE, 1.0)
 元素尺寸 = Math.round(基准值 × scale)
 面板宽度 = Math.max(200px, 300 × scale)   ← 保证最小可用宽度
-```
-
-### 断点与计算结果
-
-| 断点 | 视口宽度 | Scale | 面板宽度 | 按钮高 | 仪表盘字体 | 说明 |
-|------|---------|-------|---------|--------|-----------|------|
-| Desktop | 1366px+ | 1.000 | 300px | 34px | 36px | 桌面/笔记本全尺寸 |
-| Tablet | 768px | 0.562 | 200px (clamp) | 19px | 20px | iPad / Surface Go |
-| Phone | 430px | 0.667 | 200px (min) | 23px | 24px | iPhone 12-14 / Pixel / Samsung |
-| Small | 320px | 0.667 | 200px (min) | 23px | 24px | iPhone SE / 小屏 Android |
-
-> **设计原则**：面板宽度在手机上不低于 200px，确保 4 列按钮网格每列 ≥42px 可点击区域。
-
-
----
 
 ## CDN 缓存方案
 
